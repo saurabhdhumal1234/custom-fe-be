@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'frontend/**'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -29,4 +30,9 @@ jobs:
         run: |
           cd frontend
           npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: frontend/build
 
