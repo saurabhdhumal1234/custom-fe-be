@@ -3,12 +3,7 @@ name: Build and Test React App
 on:
   push:
     branches:
-      - master
-    paths:
-      - 'frontend/**'
-  pull_request:
-    branches:
-      - master
+      - main
     paths:
       - 'frontend/**'
 
